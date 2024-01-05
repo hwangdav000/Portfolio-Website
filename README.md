@@ -1,1 +1,3 @@
-# ethan-portfolio-starter
+# David Portfolio
+
+# based off of Cristian starter code
