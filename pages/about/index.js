@@ -90,7 +90,6 @@ const aboutData = [
 ];
 
 // components
-import Avatar from '../../components/Avatar';
 import Circles from '../../components/Circles';
 
 // framer motion
@@ -112,9 +111,7 @@ const About = () => {
         exit="hidden"
         transition={{ duration: 1, ease: 'easeInOut' }}
         className="hidden xl:flex absolute bottom-0 -left-[370px]"
-      >
-        <Avatar />
-      </motion.div>
+      ></motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         {/* text */}
         <div className="flex-1 flex flex-col justify-center">

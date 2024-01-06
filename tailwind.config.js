@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
@@ -22,9 +23,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#131424',
-        secondary: '#393A47',
-        accent: '#F13024',
+        text: '#0b1014',
+        background: '#e9e9e9',
+        primary: '#ffffff',
+        secondary: '#88c1f1',
+        accent: '#9eb5a3',
       },
       backgroundImage: {
         explosion: 'url("/bg-explosion.png")',
@@ -36,6 +39,8 @@ module.exports = {
         'spin-slow': 'spin 6s linear infinite',
       },
       fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+        notosans: ['Noto Sans Display', 'sans-serif'],
         poppins: [`var(--font-poppins)`, 'sans-serif'],
         sora: [`var(--font-sora)`, 'sans-serif'],
       },
