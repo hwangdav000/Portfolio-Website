@@ -14,7 +14,7 @@ import { fadeIn } from '../../variants';
 
 const Contact = () => {
   return (
-    <div className="h-full bg-primary/30">
+    <div className="h-full bg-background">
       <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
         <div className="flex flex-col w-full max-w-[700px]">
           <motion.h2
@@ -40,27 +40,27 @@ const Contact = () => {
               <input
                 type="text"
                 placeholder="name"
-                className="input"
+                className="input border-black/10 bg-gray-300 placeholder-black/60"
               />
               <input
                 type="text"
                 placeholder="email"
-                className="input"
+                className="input border-black/10 bg-gray-300 placeholder-black/60"
               />
             </div>
             <input
               type="text"
               placeholder="subject"
-              className="input"
+              className="input border-black/10 bg-gray-300 placeholder-black/60"
             />
             <textarea
               placeholder="message"
-              className="textarea"
+              className="textarea border-black/10 bg-gray-300 placeholder-black/60"
             ></textarea>
             <button
               className="btn
               rounded-full
-             border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
+             border border-black/10 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group bg-gray-300"
             >
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
                 Let's talk

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Tooltip } from 'react-tooltip';
 
 // icons
 import {
@@ -6,50 +7,41 @@ import {
   FaCss3,
   FaJs,
   FaReact,
-  FaWordpress,
-  FaFigma,
+  FaPython,
+  FaJava,
 } from 'react-icons/fa';
 
-import {
-  SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
-} from 'react-icons/si';
+import { SiPandas, SiTensorflow } from 'react-icons/si';
+import { TbSql } from 'react-icons/tb';
 
 //  data
 const aboutData = [
   {
-    title: 'skills',
+    title: 'Proficiency',
     info: [
       {
-        title: 'Web Development',
+        title: 'Programming Languages',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          { component: <FaPython />, title: 'Python' },
+          { component: <FaJava />, title: 'Java' },
         ],
       },
       {
-        title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
-      },
-    ],
-  },
-  {
-    title: 'awards',
-    info: [
-      {
-        title: 'Webby Awards - Honoree',
-        stage: '2011 - 2012',
+        title: 'Web Development',
+        icons: [
+          { component: <FaHtml5 />, title: 'HTML' },
+          { component: <FaCss3 />, title: 'CSS' },
+          { component: <FaJs />, title: 'JavaScript' },
+          { component: <FaReact />, title: 'React' },
+        ],
       },
       {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010',
+        title: 'Data Science',
+        icons: [
+          { component: <TbSql />, title: 'SQL' },
+          { component: <SiPandas />, title: 'Pandas' },
+          { component: <SiTensorflow />, title: 'Tensorflow' },
+        ],
       },
     ],
   },
@@ -57,33 +49,39 @@ const aboutData = [
     title: 'experience',
     info: [
       {
-        title: 'UX/UI Designer - XYZ Company',
-        stage: '2012 - 2023',
+        title: 'Software Developer Intern - Siemens',
+        stage: '2020 - Current',
       },
       {
-        title: 'Web Developer - ABC Agency',
-        stage: '2010 - 2012',
-      },
-      {
-        title: 'Intern - DEF Corporation',
-        stage: '2008 - 2010',
+        title: 'Student Instructor - Tech Academy',
+        stage: '2019',
       },
     ],
   },
   {
-    title: 'credentials',
+    title: 'Education',
     info: [
       {
-        title: 'Web Development - ABC University, LA, CA',
-        stage: '2011',
+        title:
+          'B.S. Computer Science, Math Minor - University of Minnesota, Twin Cities',
+        stage: '2021',
       },
       {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009',
+        title: 'M.S. Computer Science - University of Minnesota, Twin Cities ',
+        stage: '2023',
+      },
+    ],
+  },
+  {
+    title: 'Certifications',
+    info: [
+      {
+        title: 'IBM Data Science - Coursera',
+        stage: '2023',
       },
       {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006',
+        title: 'Machine Learning (DeepLearning.AI) - Coursera ',
+        stage: '2023',
       },
     ],
   },
@@ -101,8 +99,7 @@ import CountUp from 'react-countup';
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
-      <Circles />
+    <div className="h-full bg-background py-32 text-center xl:text-left">
       {/* avatar img */}
       <motion.div
         variants={fadeIn('right', 0.2)}
@@ -114,7 +111,7 @@ const About = () => {
       ></motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         {/* text */}
-        <div className="flex-1 flex flex-col justify-center">
+        <div className="flex-1 flex flex-col justify-center mt-12">
           <motion.h2
             variants={fadeIn('right', 0.2)}
             initial="hidden"
@@ -123,89 +120,23 @@ const About = () => {
             className="h2"
             style={{ zIndex: 1 }}
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs.
+            Turning <span className="text-accent">ideas </span> into reality
+            through the language of <span className="text-accent">logic </span>{' '}
+            and <span className="text-accent">innovation</span>
           </motion.h2>
           <motion.p
             variants={fadeIn('right', 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-text"
             style={{ zIndex: 1 }}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-            sunt, ipsa voluptates laboriosam placeat voluptatem quaerat aliquid
-            optio autem, dolorum delectus obcaecati inventore, quo excepturi
-            quod ut eaque quos repudiandae.
+            Korean-American heritage raised in the United States. Passionate
+            about Data Science and learning new things every day.
           </motion.p>
           {/*  counters */}
-          <motion.div
-            variants={fadeIn('right', 0.2)}
-            initial="hidden"
-            animate="show"
-            exit="hidden"
-            className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
-          >
-            <div className="flex flex-1 xl:gap-x-6">
-              {/* experience*/}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp
-                    start={0}
-                    end={10}
-                    duration={5}
-                  />
-                  {''}+
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Years of Experience
-                </div>
-              </div>
-              {/* clients */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp
-                    start={0}
-                    end={250}
-                    duration={5}
-                  />
-                  {''}+
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Satisfied Customers
-                </div>
-              </div>
-              {/* projects */}
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp
-                    start={0}
-                    end={650}
-                    duration={5}
-                  />
-                  {''}+
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Finished Projects
-                </div>
-              </div>
-              {/* awards */}
-              <div className="relative flex-1">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp
-                    start={0}
-                    end={8}
-                    duration={5}
-                  />
-                  {''}+
-                </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
-                  Winning awards
-                </div>
-              </div>
-            </div>
-          </motion.div>
+          {/* removed */}
         </div>
         {/* info */}
         <motion.div
@@ -213,9 +144,9 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
+          className="flex flex-col w-full xl:max-w-[48%] h-[340px]"
         >
-          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4">
+          <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4 ">
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
@@ -224,7 +155,7 @@ const About = () => {
                     ${
                       index === itemIndex
                         ? 'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'
-                        : 'after:bg-white'
+                        : 'after:bg-black'
                     } 
                     cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px]  after:absolute after:-bottom-1 after:left-0
                   `}
@@ -235,12 +166,12 @@ const About = () => {
               );
             })}
           </div>
-          <div className="py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
+          <div className="py-2 xl:py-4 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start ">
             {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div
                   key={itemIndex}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 text-white/60"
+                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 text-text"
                 >
                   {/* title */}
                   <div className="font-light mb-2 md:mb-0">{item.title}</div>
@@ -249,7 +180,20 @@ const About = () => {
                   <div className="flex gap-x-4">
                     {/* icons */}
                     {item.icons?.map((icon, itemIndex) => {
-                      return <div className="text-2xl">{icon}</div>;
+                      return (
+                        <div
+                          className="text-2xl text-black"
+                          key={`${itemIndex}-${icon.title}-div`}
+                        >
+                          <a
+                            data-tooltip-content={icon.title}
+                            data-tooltip-id={`${itemIndex}-${icon.title}-icon`}
+                          >
+                            {icon.component}
+                          </a>
+                          <Tooltip id={`${itemIndex}-${icon.title}-icon`} />
+                        </div>
+                      );
                     })}
                   </div>
                 </div>
