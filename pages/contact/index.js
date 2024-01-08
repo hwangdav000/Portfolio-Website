@@ -14,9 +14,9 @@ import { fadeIn } from '../../variants';
 
 const Contact = () => {
   return (
-    <div className="h-full bg-background">
-      <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
-        <div className="flex flex-col w-full max-w-[700px]">
+    <div className="h-full bg-background py-32">
+      <div className="container mx-auto text-center xl:text-left flex items-center justify-center">
+        <div className="flex flex-col w-full max-w-[700px] mt-12">
           <motion.h2
             variants={fadeIn('up', 0.2)}
             initial="hidden"
@@ -25,7 +25,7 @@ const Contact = () => {
             className="h2 text-center mb-12"
           >
             {/* text */}
-            Let's <span className="text-accent">connect</span>
+            Contact <span className="text-accent">Me</span>
           </motion.h2>
           {/* form */}
           <motion.form
@@ -63,7 +63,7 @@ const Contact = () => {
              border border-black/10 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group bg-gray-300"
             >
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
-                Let's talk
+                Send
               </span>
               <BsArrowRight className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]" />
             </button>

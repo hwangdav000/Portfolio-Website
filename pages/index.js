@@ -12,10 +12,10 @@ import { fadeIn } from '../variants';
 
 const Home = () => {
   return (
-    <div className="bg-background h-full">
+    <div className="h-full bg-background py-32">
       {/* text */}
-      <div className="w-full h-full ">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
+      <div className="container mx-auto w-full flex flex-col">
+        <div className="text-center flex-1 flex flex-col justify-center xl:pt-40 xl:text-left mt-12">
           {/* title */}
           <motion.h1
             variants={fadeIn('down', 0.3)}
@@ -49,10 +49,10 @@ const Home = () => {
         </div>
       </div>
       {/* image */}
-      <div className="w-full h-full absolute right-0 bottom-0">
-        {/* particles */}
-        {/* <ParticlesContainer /> */}
-      </div>
+      {/* <div className="w-full h-full absolute right-0 bottom-0"> */}
+      {/* particles */}
+      {/* <ParticlesContainer /> */}
+      {/* </div> */}
     </div>
   );
 };
