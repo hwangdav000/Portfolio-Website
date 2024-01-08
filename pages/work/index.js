@@ -19,7 +19,7 @@ const Work = () => {
               exit="hidden"
               className="h2 xl:mt-8"
             >
-              My Work <span className="text-accent">.</span>
+              Projects <span className="text-accent">.</span>
             </motion.h2>
             <motion.p
               variants={fadeIn('up', 0.4)}
@@ -28,9 +28,9 @@ const Work = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-text"
             >
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Perferendis sunt obcaecati quisquam veniam itaque error cum qui
-              facilis libero a!
+              A <span className="text-accent">collection</span> of the projects
+              that I worked on <span className="text-accent">personally</span>{' '}
+              and <span className="text-accent">academically</span>.
             </motion.p>
           </div>
           {/* slider */}

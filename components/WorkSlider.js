@@ -21,40 +21,48 @@ export const workSlider = {
     {
       images: [
         {
-          title: 'title',
-          path: '/thumb1.jpg',
+          title: 'Beijing Pollution Time Series Modeling',
+          path: '/thumb1_1.jpg',
+          link: 'https://github.com/hwangdav000/Beijing_Air_Pollution',
         },
         {
-          title: 'title',
-          path: '/thumb2.jpg',
+          title: 'Analysis of Various Transformers',
+          path: '/thumb2_1.jpg',
+          link: 'https://github.com/hwangdav000/Transformers_NLP',
         },
         {
-          title: 'title',
-          path: '/thumb3.jpg',
+          title: 'Crop Classification using a CNN-Transformer',
+          path: '/thumb3_1.jpg',
+          link: 'https://github.com/hwangdav000/CNN-Transformer',
         },
         {
-          title: 'title',
-          path: '/thumb4.jpg',
+          title: 'Baxter Block Pickup',
+          path: '/thumb4_1.jpg',
+          link: 'https://github.com/hwangdav000/ROS_Baxter',
         },
       ],
     },
     {
       images: [
         {
-          title: 'title',
-          path: '/thumb4.jpg',
+          title: 'Turtle Translations',
+          path: '/thumb5_2.jpg',
+          link: 'https://github.com/hwangdav000/Translation_Website',
         },
         {
-          title: 'title',
-          path: '/thumb1.jpg',
+          title: 'Siemens Coding Challenge',
+          path: '/thumb6_2.jpg',
+          link: 'https://github.com/hwangdav000/SiemensChallenge',
         },
         {
-          title: 'title',
-          path: '/thumb2.jpg',
+          title: 'Munchies Quiz App',
+          path: '/thumb7_2.jpg',
+          link: 'https://github.com/hwangdav000/Munchies',
         },
         {
-          title: 'title',
-          path: '/thumb3.jpg',
+          title: 'Portfolio',
+          path: '/thumb8_2.jpg',
+          link: 'https://github.com/hwangdav000/Portfolio-Website',
         },
       ],
     },
@@ -69,7 +77,7 @@ const WorkSlider = () => {
         clickable: true,
       }}
       modules={[Pagination]}
-      className="h-[280px] sm:h-[480px]"
+      className="xl:h-[500px] lg:h-[600px] md:h-[500px] sm:h-[420px] h-[380px]"
     >
       {workSlider.slides.map((slide, index) => {
         return (
@@ -85,26 +93,9 @@ const WorkSlider = () => {
                       <Image
                         src={image.path}
                         width={500}
-                        height={300}
+                        height={400}
                         alt=""
                       />
-                      {/* overlay gradient */}
-                      <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
-                      {/* title */}
-                      <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
-                        <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
-                          {/* title part 1 */}
-                          <div className="delay-100">LIVE</div>
-                          {/* title part 1 */}
-                          <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300">
-                            PROJECT
-                          </div>
-                          {/* icon */}
-                          <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
-                            <BsArrowRight />
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 );
