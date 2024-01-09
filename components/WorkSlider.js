@@ -69,6 +69,11 @@ export const workSlider = {
   ],
 };
 
+// Function to generate a random hex color
+const getRandomColor = () => {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+};
+
 const WorkSlider = () => {
   return (
     <Swiper
@@ -96,6 +101,27 @@ const WorkSlider = () => {
                         height={400}
                         alt=""
                       />
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-l from-[#e0c6ad] via-[#c2a172] to-[#9e8140] opacity-20"></div>
+
+                    <div className="absolute inset-0 bg-gradient-to-l from-[#9eb5a3] via-[#3a5cbf] to-[#1e235e] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
+                    {/* title */}
+                    <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
+                      <a
+                        href={image.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block text-white"
+                      >
+                        <div className="flex items-center gap-x-2 text-white">
+                          {/* title part 1 */}
+
+                          {/* title part 1 */}
+                          <div className="translate-y-[500%] custom-translate transition-all duration-300 custom-translate px-4">
+                            {image.title}
+                          </div>
+                        </div>
+                      </a>
                     </div>
                   </div>
                 );

@@ -5,17 +5,50 @@
 .translate-z-0 {
   transform: translateZ(0px);
 }
+
+.group:hover .custom-translate {
+  transform: translateY(0px); /* Adjust the value as needed */
+}
+
+/* med screens */
+@media (max-width: 767.99px) {
+  .group:hover .custom-translate {
+    transform: translateY(-20px);
+  }
+}
+
+/* med screens */
+@media (min-width: 768px) and (max-width: 959.99px) {
+  .group:hover .custom-translate {
+    transform: translateY(-45px);
+  }
+}
+
+/* lg screens */
+@media (min-width: 960px) and (max-width: 1199.99px) {
+  .group:hover .custom-translate {
+    transform: translateY(-70px);
+  }
+}
+
+/* xl screens and up */
+@media (min-width: 1200px) {
+  .group:hover .custom-translate {
+    transform: translateY(-10px);
+  }
+}
+
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
-  background-color: #f13024;
+  background-color: #9eb5a3;
 }
 
 .swiper-button-next:after,
 .swiper-button-prev:after,
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
-  color: #f13024;
+  color: #9eb5a3;
 }
 
 @layer base {

@@ -123,8 +123,11 @@ const About = () => {
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-text"
             style={{ zIndex: 1 }}
           >
-            Korean-American heritage raised in the United States. Passionate
-            about Data Science and learning new things every day.
+            I was born in the United States to Korean immigrant parents, and
+            raised in Minnesota. Growing up I have always had a deep interest in
+            continous learning and creation leading me to major in computer
+            science. By pursuing a major in computer science, I have cultivated
+            a keen interest and mastering the skills of data science.
           </motion.p>
           {/*  counters */}
           {/* removed */}
