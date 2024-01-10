@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 //components
@@ -6,6 +6,7 @@ import Circles from '/components/Circles';
 
 // icons
 import { BsArrowRight } from 'react-icons/bs';
+import { FaEnvelope } from 'react-icons/fa';
 
 // framer
 import {} from 'framer-motion';
@@ -17,6 +18,7 @@ import { fadeIn } from '../../variants';
 
 const Contact = () => {
   const form = useRef();
+  const [emailSent, setEmailSent] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -32,6 +34,7 @@ const Contact = () => {
         (result) => {
           console.log(result.text);
           console.log('message sent');
+          setEmailSent(true);
         },
         (error) => {
           console.log(error.text);
@@ -58,10 +61,10 @@ const Contact = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-center mb-6 text-text"
+            className="text-center mb-6 text-text flex justify-center items-center"
           >
             {/* text */}
-            Email:{' '}
+            <FaEnvelope className="mr-2 text-2xl" />{' '}
             <a
               href="mailto:hwangdav000@gmail.com"
               className="text-accent hover:underline"
@@ -105,17 +108,28 @@ const Contact = () => {
               name="message"
               className="textarea border-black/10 bg-gray-300 placeholder-black/60"
             ></textarea>
-            <button
-              type="submit"
-              value="Send"
-              className="btn rounded-full
-             border border-black/10 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group bg-gray-300"
-            >
-              <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
-                Send
-              </span>
-              <BsArrowRight className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]" />
-            </button>
+            <div className="flex gap-x-6 w-full items-center">
+              <div>
+                <button
+                  type="submit"
+                  value="Send"
+                  className="btn rounded-full
+             border border-black/10 max-w-[200px] px-8 h-12 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group bg-gray-300"
+                >
+                  <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
+                    Send
+                  </span>
+                  <BsArrowRight className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px]" />
+                </button>
+              </div>
+              <div>
+                {emailSent && (
+                  <div className="text-accent text-center">
+                    Message sent successfully!
+                  </div>
+                )}
+              </div>
+            </div>
           </motion.form>
         </div>
       </div>

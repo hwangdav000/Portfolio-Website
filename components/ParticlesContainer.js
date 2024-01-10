@@ -12,7 +12,7 @@ const ParticlesContainer = () => {
 
   return (
     <Particles
-      className="w-full h-full absolute translate-z-0"
+      className="w-full h-full absolute"
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
@@ -48,14 +48,7 @@ const ParticlesContainer = () => {
         },
         particles: {
           color: {
-            value: '#e68e2e',
-          },
-          links: {
-            color: '#f5d393',
-            distance: 150,
-            enable: true,
-            opacity: 0.5,
-            width: 1,
+            value: '#718096',
           },
           collisions: {
             enable: true,
@@ -66,7 +59,7 @@ const ParticlesContainer = () => {
             outModes: {
               default: 'bounce',
             },
-            random: false,
+            random: true,
             speed: 1,
             straight: false,
           },
