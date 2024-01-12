@@ -1,4 +1,5 @@
-import Image from 'next/image';
+import React from 'react';
+import Typed from 'typed.js';
 
 // components
 import ParticlesContainer from '../components/ParticlesContainer';
@@ -11,6 +12,35 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { fadeIn, fadeIn2, fadeInOut } from '../variants';
 
 const Home = () => {
+  const el = React.useRef(null);
+
+  React.useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: [
+        'Student',
+        'Multi-Linguist',
+        'Adventurer',
+        'Artist',
+        'Creative',
+        'Data Scientist',
+        'Web Designer',
+        'Pianist',
+        'Korean',
+        'American',
+        'Gamer',
+      ],
+      typeSpeed: 200,
+      startDelay: 5000,
+      backSpeed: 50,
+      loop: true,
+    });
+
+    return () => {
+      // Destroy Typed instance during cleanup to stop animation
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <div className="h-full bg-background py-32 z-20">
       <div className="container mx-auto w-full flex flex-col">
@@ -26,7 +56,12 @@ const Home = () => {
           >
             Welcome <br />
             Welcome <br />
-            <span className="text-accent">Welcome</span>
+            <span
+              className="text-accent
+            "
+            >
+              Welcome{' '}
+            </span>
           </motion.h1>
         </div>
       </div>
@@ -43,10 +78,23 @@ const Home = () => {
           exit="hidden"
           className="h-title bold font-montserrat text-text z-20"
         >
-          <div className="flex flex-1 items-center justify-center w-full h-full">
+          <div
+            className="absolute left-1/2 items-center w-full h-full text-left"
+            style={{ width: '1000px', left: '25%' }} // Set a fixed width
+          >
             <div>
-              My Name Is <br /> David Hwang <br />{' '}
-              <span className="text-accent">Computer Programmer</span>
+              <div>
+                My Name Is <br /> David Hwang <br />{' '}
+              </div>
+              <div>
+                <span
+                  className="text-accent asolute"
+                  ref={el}
+                >
+                  {' '}
+                  Computer Scientist
+                </span>
+              </div>
             </div>
           </div>
         </motion.h1>
