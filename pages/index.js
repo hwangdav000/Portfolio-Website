@@ -93,6 +93,22 @@ const Home = () => {
           <ParticlesContainer />
         </motion.div>
 
+        {/* Masking Motion Div */}
+        <motion.div
+          initial={{ opacity: 0, scaleY: 0, y: '31%' }} // Start at 30% from the top
+          animate={{
+            opacity: 1,
+            scaleY: 1,
+            y: '100%',
+            transition: { delay: 4, duration: 0.0 },
+          }} // End at 60% from the top
+          exit={{ opacity: 0, scaleY: 0, y: '40%' }}
+          className="absolute w-full h-full bg-[#e9e9e9]"
+          style={{ transformOrigin: 'top', height: '31%' }} // Adjust the height as needed
+        />
+      </div>
+
+      <div className="w-full h-full absolute right-0 bottom-0 z-30">
         {/* title */}
         <motion.h1
           variants={fadeIn2('right', 0.5)}
