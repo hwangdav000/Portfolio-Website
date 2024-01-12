@@ -28,7 +28,7 @@ export const fadeIn = (direction, delay) => {
 export const fadeIn2 = (direction, delay) => {
   return {
     hidden: {
-      y: direction === 'up' ? 80 : direction === 'down' ? -160 : 0,
+      y: direction === 'up' ? 80 : direction === 'down' ? -80 : 0,
       opacity: 0,
       x: direction === 'left' ? 80 : direction === 'right' ? -160 : 0,
       transition: {
@@ -45,7 +45,7 @@ export const fadeIn2 = (direction, delay) => {
       transition: {
         type: 'tween',
         duration: 2.0,
-        delay: 2.5,
+        delay: 3,
         ease: [0.25, 0.25, 0.25, 0.75],
       },
     },
@@ -55,13 +55,13 @@ export const fadeIn2 = (direction, delay) => {
 export const fadeInOut = (direction, delay) => {
   return {
     hidden: {
-      y: direction === 'up' ? 80 : direction === 'down' ? -80 : 0,
-      opacity: 0,
+      y: direction === 'up' ? 400 : direction === 'down' ? -900 : 0,
+      opacity: 0.0,
       x: direction === 'left' ? 80 : direction === 'right' ? -80 : 0,
       transition: {
         type: 'tween',
-        duration: 1.5,
-        delay: delay,
+        duration: 3.0,
+        delay: 1.5,
         ease: [0.25, 0.6, 0.3, 0.8],
       },
     },
@@ -71,16 +71,16 @@ export const fadeInOut = (direction, delay) => {
       opacity: 1,
       transition: {
         type: 'tween',
-        duration: 3,
-        delay: delay,
-        ease: [0.25, 0.25, 0.25, 0.75],
+        duration: 4.0,
+        delay: 1.0,
+        ease: [0.25, 0.25, 0.25, 0.7],
       },
     },
     exit: {
       opacity: 0,
       transition: {
         type: 'tween',
-        duration: 0.8, // You can adjust the exit duration as needed
+        duration: 1.5, // You can adjust the exit duration as needed
         ease: [0.25, 0.6, 0.3, 0.8],
       },
     },
