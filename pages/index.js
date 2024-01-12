@@ -15,31 +15,48 @@ const Home = () => {
   const el = React.useRef(null);
 
   React.useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: [
-        'Student',
-        'Multi-Linguist',
-        'Adventurer',
-        'Artist',
-        'Creative',
-        'Data Scientist',
-        'Web Designer',
-        'Pianist',
-        'Korean',
-        'American',
-        'Gamer',
-      ],
-      typeSpeed: 200,
-      startDelay: 5000,
-      backSpeed: 50,
-      loop: true,
-    });
+    // Function to create Typed instance
+    const createTypedInstance = () => {
+      const typed = new Typed(el.current, {
+        strings: [
+          'Student',
+          'Multi-Linguist',
+          'Adventurer',
+          'Artist',
+          'Creative',
+          'Data Scientist',
+          'Web Designer',
+          'Pianist',
+          'Korean',
+          'American',
+          'Gamer',
+        ],
+        typeSpeed: 100,
+        startDelay: 5000,
+        backSpeed: 50,
+        backDelay: 2000,
+        smartBackspace: true,
+        loop: true,
+      });
 
-    return () => {
-      // Destroy Typed instance during cleanup to stop animation
-      typed.destroy();
+      // Return the Typed instance to use it later if needed
+      return typed;
     };
-  }, []);
+    // Set a timeout before creating the Typed instance
+    const timeoutId = setTimeout(() => {
+      // Call the function to create Typed instance
+      const typedInstance = createTypedInstance();
+
+      // Cleanup function
+      return () => {
+        // Destroy Typed instance during cleanup to stop animation
+        typedInstance.destroy();
+      };
+    }, 750); // Adjust the delay time as needed
+
+    // Cleanup the timeout to prevent memory leaks
+    return () => clearTimeout(timeoutId);
+  }, []); // Empty dependency array to run the effect only once on mount
 
   return (
     <div className="h-full bg-background py-32 z-20">
@@ -91,7 +108,6 @@ const Home = () => {
                   className="text-accent asolute"
                   ref={el}
                 >
-                  {' '}
                   Computer Scientist
                 </span>
               </div>
