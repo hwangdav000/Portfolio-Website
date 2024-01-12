@@ -82,8 +82,8 @@ export const fadeInOut = (direction, delay) => {
       opacity: 1,
       transition: {
         type: 'tween',
-        duration: 4.0,
-        delay: 1.0,
+        duration: 3.0,
+        delay: 0.5,
         ease: [0.25, 0.25, 0.25, 0.7],
       },
     },

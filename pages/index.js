@@ -22,7 +22,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="exit"
-            className="h-welcome text-[10rem] md:text-[2rem] bold font-montserrat text-text "
+            className="h-welcome bold font-montserrat text-text "
           >
             Welcome <br />
             Welcome <br />
