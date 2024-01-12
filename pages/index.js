@@ -32,12 +32,11 @@ const Home = () => {
           'Gamer',
         ],
         typeSpeed: 100,
-        startDelay: 5000,
         backSpeed: 50,
         backDelay: 2000,
         smartBackspace: false,
         loop: true,
-        onLastStringBackspaced: () => (typed.strPos = 0), // set position to 0
+        onLastStringBackspaced: () => (typed.strPos = 0),
       });
 
       // Return the Typed instance to use it later if needed
@@ -86,7 +85,13 @@ const Home = () => {
 
       <div className="w-full h-full absolute right-0 bottom-0 z-30">
         {/* particles */}
-        <ParticlesContainer />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { delay: 5, duration: 0.75 } }}
+          exit={{ opacity: 0 }}
+        >
+          <ParticlesContainer />
+        </motion.div>
 
         {/* title */}
         <motion.h1
