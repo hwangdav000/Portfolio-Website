@@ -48,7 +48,7 @@ const ParticlesContainer = () => {
         },
         particles: {
           color: {
-            value: '#718096',
+            value: '#2e8b57',
           },
           collisions: {
             enable: true,

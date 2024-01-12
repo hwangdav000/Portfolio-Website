@@ -35,8 +35,9 @@ const Home = () => {
         startDelay: 5000,
         backSpeed: 50,
         backDelay: 2000,
-        smartBackspace: true,
+        smartBackspace: false,
         loop: true,
+        onLastStringBackspaced: () => (typed.strPos = 0), // set position to 0
       });
 
       // Return the Typed instance to use it later if needed
@@ -85,7 +86,7 @@ const Home = () => {
 
       <div className="w-full h-full absolute right-0 bottom-0 z-30">
         {/* particles */}
-        {/* <ParticlesContainer /> */}
+        <ParticlesContainer />
 
         {/* title */}
         <motion.h1
@@ -105,7 +106,7 @@ const Home = () => {
               </div>
               <div>
                 <span
-                  className="text-accent asolute"
+                  className="text-accent"
                   ref={el}
                 >
                   Computer Scientist
