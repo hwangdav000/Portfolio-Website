@@ -11,7 +11,7 @@ import {
   FaJava,
 } from 'react-icons/fa';
 
-import { SiPandas, SiTensorflow } from 'react-icons/si';
+import { SiPandas, SiTensorflow, SiPytorch } from 'react-icons/si';
 import { TbSql } from 'react-icons/tb';
 
 // framer motion
@@ -45,6 +45,7 @@ const aboutData = [
         icons: [
           { component: <TbSql />, title: 'SQL' },
           { component: <SiPandas />, title: 'Pandas' },
+          { component: <SiPytorch />, title: 'Pytorch' },
           { component: <SiTensorflow />, title: 'Tensorflow' },
         ],
       },
@@ -163,7 +164,7 @@ const About = () => {
               return (
                 <div
                   key={itemIndex}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 text-text text-sizing"
+                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-4 text-text text-sizing"
                 >
                   {/* title */}
                   <div className="justify-between">
