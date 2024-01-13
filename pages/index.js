@@ -20,7 +20,6 @@ const Home = () => {
       const typed = new Typed(el.current, {
         strings: [
           'Multi-Linguist',
-          'Adventurer',
           'Artist',
           'Creator',
           'Data Scientist',
@@ -28,7 +27,7 @@ const Home = () => {
           'Pianist',
           'Korean',
           'American',
-          'Gamer',
+          'Adventurer',
         ],
         typeSpeed: 100,
         backSpeed: 50,

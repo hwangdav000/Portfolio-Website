@@ -95,7 +95,6 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
 
 // counter
-import CountUp from 'react-countup';
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
