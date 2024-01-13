@@ -39,16 +39,6 @@ const ParticlesContainer = () => {
               distance: 200,
               duration: 0.4,
             },
-            external: [
-              {
-                // Use the id of the collision-div
-                id: 'collision-div',
-                // Collide with the particles
-                collisions: {
-                  enable: true,
-                },
-              },
-            ],
           },
         },
         particles: {
