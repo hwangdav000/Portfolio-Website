@@ -61,7 +61,7 @@ const Home = () => {
   return (
     <div className="h-full bg-background py-32 z-20">
       <div className="container mx-auto w-full flex flex-col">
-        <div className="text-center flex-1 flex flex-col justify-center xl:pt-40  mt-12 z-20">
+        <div className="text-center flex-1 flex flex-col justify-center xl:pt-40  mt-12 z-40">
           {/* title */}
 
           <motion.h1
@@ -94,18 +94,7 @@ const Home = () => {
         </motion.div>
 
         {/* Masking Motion Div */}
-        <motion.div
-          initial={{ opacity: 0, scaleY: 0, y: '31%' }} // Start at 30% from the top
-          animate={{
-            opacity: 1,
-            scaleY: 1,
-            y: '100%',
-            transition: { delay: 4, duration: 0.0 },
-          }} // End at 60% from the top
-          exit={{ opacity: 0, scaleY: 0, y: '40%' }}
-          className="absolute w-full h-full bg-[#e9e9e9]"
-          style={{ transformOrigin: 'top', height: '31%' }} // Adjust the height as needed
-        />
+        <div className="absolute w-full h-full  cutout-sizing bg-[#e9e9e9]" />
       </div>
 
       <div className="w-full h-full absolute right-0 bottom-0 z-30">
@@ -125,14 +114,13 @@ const Home = () => {
               <div>
                 My Name Is <br /> David Hwang <br />{' '}
               </div>
-              <div>
-                <span
-                  className="text-accent"
-                  ref={el}
-                >
-                  Computer Scientist
-                </span>
-              </div>
+
+              <span
+                className="text-accent"
+                ref={el}
+              >
+                Computer Scientist
+              </span>
             </div>
           </div>
         </motion.h1>
