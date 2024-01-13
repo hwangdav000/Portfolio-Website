@@ -1,9 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
-//components
-import Circles from '/components/Circles';
-
 // icons
 import { BsArrowRight } from 'react-icons/bs';
 import { FaEnvelope } from 'react-icons/fa';

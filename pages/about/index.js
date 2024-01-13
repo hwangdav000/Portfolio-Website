@@ -14,6 +14,10 @@ import {
 import { SiPandas, SiTensorflow } from 'react-icons/si';
 import { TbSql } from 'react-icons/tb';
 
+// framer motion
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../variants';
+
 //  data
 const aboutData = [
   {
@@ -86,13 +90,6 @@ const aboutData = [
     ],
   },
 ];
-
-// components
-import Circles from '../../components/Circles';
-
-// framer motion
-import { motion } from 'framer-motion';
-import { fadeIn } from '../../variants';
 
 // counter
 const About = () => {

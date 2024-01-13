@@ -3,7 +3,6 @@ import Typed from 'typed.js';
 
 // components
 import ParticlesContainer from '../components/ParticlesContainer';
-import ProjectsBtn from '../components/ProjectsBtn';
 
 // framer motion
 import { motion, AnimatePresence } from 'framer-motion';
