@@ -18,14 +18,14 @@ const Home = () => {
     const createTypedInstance = () => {
       const typed = new Typed(el.current, {
         strings: [
-          'Multi-Linguist',
-          'Artist',
-          'Creator',
           'Data Scientist',
           'Web Designer',
+          'Multi-Linguist',
+          'Artist',
+          'American',
+          'Creator',
           'Pianist',
           'Korean',
-          'American',
           'Adventurer',
         ],
         typeSpeed: 100,
