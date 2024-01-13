@@ -127,7 +127,7 @@ const About = () => {
             raised in Minnesota. Growing up I have always had a deep interest in
             continous learning and creation leading me to major in computer
             science. By pursuing a major in computer science, I have cultivated
-            a keen interest and mastering the skills of data science.
+            a keen interest in data science and the web.
           </motion.p>
           {/*  counters */}
           {/* removed */}
