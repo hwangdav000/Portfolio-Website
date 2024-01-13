@@ -44,7 +44,7 @@ const Contact = () => {
       <div className="container mx-auto text-center xl:text-left flex items-center justify-center">
         <div className="flex flex-col w-full max-w-[700px] mt-12">
           <motion.h2
-            variants={fadeIn('up', 0.2)}
+            variants={fadeIn('down', 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
@@ -54,7 +54,7 @@ const Contact = () => {
             Contact <span className="text-accent">Me</span>
           </motion.h2>
           <motion.p
-            variants={fadeIn('up', 0.2)}
+            variants={fadeIn('down', 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
@@ -71,7 +71,7 @@ const Contact = () => {
           </motion.p>
           {/* form */}
           <motion.form
-            variants={fadeIn('up', 0.4)}
+            variants={fadeIn('down', 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
