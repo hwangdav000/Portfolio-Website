@@ -28,6 +28,7 @@ const aboutData = [
         icons: [
           { component: <FaPython />, title: 'Python' },
           { component: <FaJava />, title: 'Java' },
+          { component: <FaJs />, title: 'JavaScript' },
         ],
       },
       {
@@ -66,13 +67,14 @@ const aboutData = [
     title: 'Education',
     info: [
       {
-        title:
-          'B.S. Computer Science, Math Minor - University of Minnesota, Twin Cities',
+        title: 'B.S. Computer Science, Math Minor',
         stage: '2021',
+        stage2: 'University of Minnesota, Twin Cities',
       },
       {
-        title: 'M.S. Computer Science - University of Minnesota, Twin Cities ',
+        title: 'M.S. Computer Science',
         stage: '2023',
+        stage2: 'University of Minnesota, Twin Cities',
       },
     ],
   },
@@ -156,7 +158,7 @@ const About = () => {
               );
             })}
           </div>
-          <div className="py-2 xl:py-4 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start ">
+          <div className="py-2 xl:py-4 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start resume-sizing">
             {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div
@@ -164,10 +166,12 @@ const About = () => {
                   className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 text-text text-sizing"
                 >
                   {/* title */}
-                  <div className="font-light mb-2 md:mb-0">{item.title}</div>
-                  <div className="hidden md:flex">-</div>
-                  <div>{item.stage}</div>
-                  <div className="flex gap-x-4">
+                  <div className="justify-between">
+                    <div className="mb-2 md:mb-0">{item.title}</div>
+                    <div className="font-light">{item.stage2}</div>
+                    <div className="font-light">{item.stage}</div>
+                  </div>
+                  <div className="flex gap-x-4 justify-center">
                     {/* icons */}
                     {item.icons?.map((icon, itemIndex) => {
                       return (

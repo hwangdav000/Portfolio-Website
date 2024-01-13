@@ -44,6 +44,7 @@
     width: 400px;
     border-radius: 10%;
   }
+  
 }
 
 /* lg screens */
@@ -81,6 +82,10 @@
 
   .text-sizing {
     font-size: 1.2em;
+  }
+
+  .resume-sizing {
+    width: 480px;
   }
 }
 
