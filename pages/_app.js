@@ -27,7 +27,6 @@ function MyApp({ Component, pageProps }) {
           <motion.div
             key={router.route}
             className="h-full"
-            style={{ zIndex: 80 }}
           >
             <Transition />
             <Component {...pageProps} />

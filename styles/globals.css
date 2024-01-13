@@ -11,8 +11,11 @@
 }
 
 .cutout-sizing {
-  top: 29%;
-  height: 16%;
+  top: 30%;
+  height:160px;
+  left: 25%;
+  width: 300px;
+  border-radius: 10%;
 }
 
 /* med screens */
@@ -21,8 +24,11 @@
     transform: translateY(-20px);
   }
   .cutout-sizing {
-    top: 29%;
-    height: 15%;
+    top: 30%;
+    height:160px;
+    left: 25%;
+    width: 300px;
+    border-radius: 10%;
   }
 }
 
@@ -33,7 +39,10 @@
   }
   .cutout-sizing {
     top: 30%;
-    height: 20%;
+    height:220px;
+    left: 25%;
+    width: 400px;
+    border-radius: 10%;
   }
 }
 
@@ -45,7 +54,10 @@
 
   .cutout-sizing {
     top: 30%;
-    height: 25%;
+    height:280px;
+    left: 25%;
+    width: 510px;
+    border-radius: 10%;
   }
 }
 
@@ -57,7 +69,10 @@
 
   .cutout-sizing {
   top: 31%;
-  height: 32%;
+  height:360px;
+  left: 25%;
+  width: 660px;
+  border-radius: 10%;
 }
 }
 

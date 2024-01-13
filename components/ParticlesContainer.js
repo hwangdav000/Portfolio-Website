@@ -18,11 +18,6 @@ const ParticlesContainer = () => {
       loaded={particlesLoaded}
       options={{
         fullScreen: { enable: false },
-        background: {
-          color: {
-            value: '',
-          },
-        },
         fpsLimit: 120,
         interactivity: {
           events: {
@@ -44,6 +39,16 @@ const ParticlesContainer = () => {
               distance: 200,
               duration: 0.4,
             },
+            external: [
+              {
+                // Use the id of the collision-div
+                id: 'collision-div',
+                // Collide with the particles
+                collisions: {
+                  enable: true,
+                },
+              },
+            ],
           },
         },
         particles: {
@@ -51,7 +56,7 @@ const ParticlesContainer = () => {
             value: '#7b927f',
           },
           collisions: {
-            enable: true,
+            enable: false,
           },
           move: {
             directions: 'none',
@@ -77,7 +82,7 @@ const ParticlesContainer = () => {
             type: 'circle',
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 1, max: 20 },
           },
         },
         detectRetina: true,

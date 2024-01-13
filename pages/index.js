@@ -19,11 +19,10 @@ const Home = () => {
     const createTypedInstance = () => {
       const typed = new Typed(el.current, {
         strings: [
-          'Student',
           'Multi-Linguist',
           'Adventurer',
           'Artist',
-          'Creative',
+          'Creator',
           'Data Scientist',
           'Web Designer',
           'Pianist',
@@ -34,6 +33,7 @@ const Home = () => {
         typeSpeed: 100,
         backSpeed: 50,
         backDelay: 2000,
+        startDelay: 5000,
         smartBackspace: false,
         loop: true,
         onLastStringBackspaced: () => (typed.strPos = 0),
@@ -94,7 +94,10 @@ const Home = () => {
         </motion.div>
 
         {/* Masking Motion Div */}
-        <div className="absolute w-full h-full  cutout-sizing bg-[#e9e9e9]" />
+        <div
+          id="collision-div"
+          className="absolute h-full  cutout-sizing bg-[#e9e9e9]"
+        />
       </div>
 
       <div className="w-full h-full absolute right-0 bottom-0 z-30">
