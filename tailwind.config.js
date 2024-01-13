@@ -29,15 +29,6 @@ module.exports = {
         secondary: '#88c1f1',
         accent: '#9eb5a3',
       },
-      backgroundImage: {
-        explosion: 'url("/bg-explosion.png")',
-        circles: 'url("/bg-circles.png")',
-        circleStar: 'url("/circle-star.svg")',
-        site: 'url("/site-bg.svg")',
-      },
-      animation: {
-        'spin-slow': 'spin 6s linear infinite',
-      },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
         notosans: ['Noto Sans Display', 'sans-serif'],
