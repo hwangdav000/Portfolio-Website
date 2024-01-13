@@ -116,14 +116,14 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-text"
+            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-text text-sizing"
             style={{ zIndex: 1 }}
           >
-            I was born in the United States to Korean immigrant parents, and
-            raised in Minnesota. Growing up I have always had a deep interest in
-            continous learning and creation leading me to major in computer
-            science. By pursuing a major in computer science, I have cultivated
-            a keen interest in data science and the web.
+            David Hwang was born in the United States to Korean immigrant
+            parents, and raised in Minnesota. Growing up I have always had a
+            deep interest in continous learning and creation leading me to major
+            in computer science. By pursuing a major in computer science, I have
+            cultivated a keen interest in data science and the web.
           </motion.p>
           {/*  counters */}
           {/* removed */}
@@ -134,7 +134,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] h-[340px]"
+          className="flex flex-col w-full xl:max-w-[48%] h-[400px]"
         >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4 ">
             {aboutData.map((item, itemIndex) => {
@@ -147,7 +147,7 @@ const About = () => {
                         ? 'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'
                         : 'after:bg-black'
                     } 
-                    cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px]  after:absolute after:-bottom-1 after:left-0
+                    cursor-pointer capitalize relative after:w-8 after:h-[2px]  after:absolute after:-bottom-1 after:left-0 text-sizing
                   `}
                   onClick={() => setIndex(itemIndex)}
                 >
@@ -161,7 +161,7 @@ const About = () => {
               return (
                 <div
                   key={itemIndex}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 text-text"
+                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 text-text text-sizing"
                 >
                   {/* title */}
                   <div className="font-light mb-2 md:mb-0">{item.title}</div>

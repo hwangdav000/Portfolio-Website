@@ -26,7 +26,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-text"
+              className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-text text-sizing"
             >
               A <span className="text-accent">collection</span> of the projects
               that I worked on <span className="text-accent">personally</span>{' '}
