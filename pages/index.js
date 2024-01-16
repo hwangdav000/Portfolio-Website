@@ -17,7 +17,17 @@ const Home = () => {
     // Function to create Typed instance
     const createTypedInstance = () => {
       const typed = new Typed(el.current, {
-        strings: ['Data Scientist', 'Web Designer', 'Multi-Linguist'],
+        strings: [
+          'Computer<br />&nbsp;&nbsp;&nbsp;Scientist',
+          'Web Designer',
+          'Multi-Linguist',
+          'Artist',
+          'American',
+          'Creator',
+          'Pianist',
+          'Korean',
+          'Adventurer',
+        ],
         typeSpeed: 100,
         backSpeed: 50,
         backDelay: 2000,
@@ -113,7 +123,7 @@ const Home = () => {
                 className="text-accent"
                 ref={el}
               >
-                Computer Scientist
+                Data Scientist
               </span>
             </div>
           </div>
