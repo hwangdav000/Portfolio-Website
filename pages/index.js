@@ -17,17 +17,7 @@ const Home = () => {
     // Function to create Typed instance
     const createTypedInstance = () => {
       const typed = new Typed(el.current, {
-        strings: [
-          'Data Scientist',
-          'Web Designer',
-          'Multi-Linguist',
-          'Artist',
-          'American',
-          'Creator',
-          'Pianist',
-          'Korean',
-          'Adventurer',
-        ],
+        strings: ['Data Scientist', 'Web Designer', 'Multi-Linguist'],
         typeSpeed: 100,
         backSpeed: 50,
         backDelay: 2000,
@@ -92,10 +82,13 @@ const Home = () => {
         </motion.div>
 
         {/* Masking Motion Div */}
-        <div
-          id="collision-div"
-          className="absolute h-full  cutout-sizing bg-[#e9e9e9]"
-        />
+        <motion.div
+          id="cutout"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { delay: 4.5, duration: 0.75 } }}
+          exit={{ opacity: 0 }}
+          className="absolute h-full  cutout-sizing bg-gray-300"
+        ></motion.div>
       </div>
 
       <div className="w-full h-full absolute right-0 bottom-0 z-30">
