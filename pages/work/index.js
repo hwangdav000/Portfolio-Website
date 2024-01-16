@@ -41,7 +41,7 @@ const Work = () => {
             exit={{
               opacity: 0,
               position: 'relative',
-              transition: { duration: 0.4 },
+              transition: { duration: 0.1 },
             }}
             className="w-full xl:max-w-[65%]"
           >
