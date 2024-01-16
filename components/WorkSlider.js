@@ -66,11 +66,6 @@ export const workSlider = {
   ],
 };
 
-// Function to generate a random hex color
-const getRandomColor = () => {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-};
-
 const WorkSlider = () => {
   return (
     <Swiper

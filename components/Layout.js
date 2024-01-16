@@ -1,5 +1,5 @@
 // fonts
-import { Sora } from "next/font/google";
+import { Sora } from 'next/font/google';
 
 // font settings
 const sora = Sora({
@@ -14,8 +14,6 @@ import Header from '../components/Header';
 
 // framer motion
 import { motion } from 'framer-motion';
-// variants
-import { fadeIn } from '../variants';
 
 const Layout = ({ children }) => {
   return (
