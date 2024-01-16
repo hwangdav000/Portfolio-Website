@@ -95,7 +95,7 @@ const WorkSlider = () => {
                       <Image
                         src={image.path}
                         width={500}
-                        height={400}
+                        height={300}
                         alt=""
                       />
                     </div>
