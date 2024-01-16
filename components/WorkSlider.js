@@ -69,6 +69,7 @@ export const workSlider = {
 const WorkSlider = () => {
   return (
     <Swiper
+      key="workSlider"
       spaceBetween={10}
       pagination={{
         clickable: true,
