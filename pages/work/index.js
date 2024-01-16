@@ -38,10 +38,11 @@ const Work = () => {
             variants={fadeIn('up', 0.4)}
             initial="hidden"
             animate="show"
+            id="work_m_div"
             exit={{
               opacity: 0,
-              position: 'relative',
-              transition: { duration: 0.1 },
+              position: 'absolute',
+              transition: { duration: 0.0 },
             }}
             className="w-full xl:max-w-[65%]"
           >
