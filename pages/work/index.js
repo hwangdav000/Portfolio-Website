@@ -41,9 +41,7 @@ const Work = () => {
             id="work_m_div"
             exit={{
               opacity: 0,
-              overflow: 'hidden',
-              position: 'absolute',
-              transition: { duration: 0.0 },
+              transition: { duration: 0 },
             }}
             className="w-full xl:max-w-[65%]"
           >
