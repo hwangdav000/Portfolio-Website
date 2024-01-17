@@ -110,10 +110,7 @@ const Home = () => {
           exit="hidden"
           className="h-title bold font-montserrat text-text z-20"
         >
-          <div
-            className="absolute left-1/2 items-center w-full h-full text-left"
-            style={{ width: '1000px', left: '25%' }} // Set a fixed width
-          >
+          <div className="absolute items-center w-full h-full text-left title-sizing">
             <div>
               <div>
                 &nbsp;My Name Is <br /> David Hwang <br />{' '}

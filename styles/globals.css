@@ -12,16 +12,22 @@
 
 .cutout-sizing {
   position: absolute;
-  top: 42%;
+  top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 500px;
-  width: 500px;
+  height: 370px;
+  width: 370px;
   border-radius: 50%;
 }
 
+.title-sizing {
+  width: 400px;
+  left: 50%;
+  transform: translateX(-40%);
+}
 
-/* med screens */
+
+/* small screens */
 @media (max-width: 767.99px) {
   .group:hover .custom-translate {
     transform: translateY(-20px);
@@ -31,9 +37,14 @@
     top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 400px;
-    width: 400px;
+    height: 370px;
+    width: 370px;
     border-radius: 50%;
+  }
+  .title-sizing {
+    width: 400px;
+    left: 50%;
+    transform: translateX(-40%);
   }
 }
 
@@ -44,12 +55,17 @@
   }
   .cutout-sizing {
     position: absolute;
-    top: 42%;
+    top: 44%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 500px;
-    width: 500px;
+    height: 480px;
+    width: 480px;
     border-radius: 50%;
+  }
+  .title-sizing {
+    width: 500px;
+    left: 50%;
+    transform: translateX(-40%);
   }
   
 }
@@ -72,6 +88,12 @@
   .text-sizing {
     font-size: 1.1em;
   }
+
+  .title-sizing {
+    width: 800px;
+    left: 25%;
+    transform: none;
+  }
 }
 
 /* xl screens and up */
@@ -81,7 +103,7 @@
   }
 
   .cutout-sizing {
-    top: 15%;
+    top: 13%;
     height:800px;
     left: 22%;
     width: 800px;
@@ -95,6 +117,12 @@
 
   .resume-sizing {
     width: 480px;
+  }
+
+  .title-sizing {
+    width: 800px;
+    left: 25%;
+    transform: none;
   }
 }
 
