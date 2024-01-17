@@ -116,7 +116,7 @@ const Home = () => {
           >
             <div>
               <div>
-                My Name Is <br /> David Hwang <br />{' '}
+                &nbsp;My Name Is <br /> David Hwang <br />{' '}
               </div>
 
               <span
