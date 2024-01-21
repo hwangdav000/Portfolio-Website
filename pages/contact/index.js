@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 
 // icons
@@ -14,6 +14,13 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
 
 const Contact = () => {
+  useEffect(() => {
+    document.body.classList.add('phone-scroll'); // Add class on component mount
+    return () => {
+      document.body.classList.remove('phone-scroll'); // Remove class on component unmount
+    };
+  }, []);
+
   const form = useRef();
   const [emailSent, setEmailSent] = useState(false);
 
@@ -40,7 +47,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-full bg-background py-32">
+    <div className="h-full bg-background py-32 phone-scroll">
       <div className="container mx-auto text-center xl:text-left flex items-center justify-center">
         <div className="flex flex-col w-full max-w-[700px] mt-12">
           <motion.h2

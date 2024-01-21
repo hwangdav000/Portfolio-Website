@@ -26,6 +26,16 @@
   transform: translateX(-40%);
 }
 
+/* phone scrolling */
+@media (max-width: 360px) and (max-height: 780px) {
+    body.phone-scroll {
+        overflow-y: auto; /* Enable vertical scrolling */
+        padding-bottom: 80px; /* Adjust the padding-bottom value to match the navbar height */
+    }
+    /* Add any other styles specific to the specified conditions */
+}
+
+
 
 /* small screens */
 @media (max-width: 767.99px) {

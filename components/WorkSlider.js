@@ -42,9 +42,9 @@ export const workSlider = {
     {
       images: [
         {
-          title: 'Turtle Translations',
-          path: '/thumb5_2.jpg',
-          link: 'https://github.com/hwangdav000/Translation_Website',
+          title: 'Red Wine Analysis',
+          path: '/thumb10_2.jpg',
+          link: 'https://github.com/hwangdav000/Red-Wine-Analysis',
         },
         {
           title: 'Siemens Coding Challenge',
@@ -57,9 +57,9 @@ export const workSlider = {
           link: 'https://github.com/hwangdav000/Munchies',
         },
         {
-          title: 'Portfolio',
-          path: '/thumb8_2.jpg',
-          link: 'https://github.com/hwangdav000/Portfolio-Website',
+          title: 'VR Dart Training',
+          path: '/thumb9_2.jpg',
+          link: 'https://github.com/hwangdav000/VR_Darts',
         },
       ],
     },
