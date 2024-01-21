@@ -14,13 +14,6 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
 
 const Contact = () => {
-  useEffect(() => {
-    document.body.classList.add('phone-scroll'); // Add class on component mount
-    return () => {
-      document.body.classList.remove('phone-scroll'); // Remove class on component unmount
-    };
-  }, []);
-
   const form = useRef();
   const [emailSent, setEmailSent] = useState(false);
 

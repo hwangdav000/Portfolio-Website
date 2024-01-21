@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Tooltip } from 'react-tooltip';
 
 // icons
@@ -98,7 +98,7 @@ const aboutData = [
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="h-full bg-background py-32 text-center xl:text-left">
+    <div className="h-full bg-background py-32 text-center xl:text-left phone-scroll">
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         {/* text */}
         <div className="flex-1 flex flex-col justify-center mt-12">
@@ -159,7 +159,7 @@ const About = () => {
               );
             })}
           </div>
-          <div className="py-2 xl:py-4 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start resume-sizing">
+          <div className="py-2 xl:py-4 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start resume-sizing phone-padding">
             {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div
