@@ -56,7 +56,7 @@ const aboutData = [
     info: [
       {
         title: 'Software Developer Intern - Siemens',
-        stage: '2020 - Current',
+        stage: 'June 2020 - January 2024',
       },
       {
         title: 'Student Instructor - Tech Academy',
