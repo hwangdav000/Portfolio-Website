@@ -63,10 +63,10 @@ const Contact = () => {
             {/* text */}
             <FaEnvelope className="mr-2 text-2xl" />{' '}
             <a
-              href="mailto:hwangdav000@gmail.com"
+              href="mailto:dhwang.contact@gmail.com"
               className="text-accent hover:underline text-sizing"
             >
-              hwangdav000@gmail.com
+              dhwang.contact@gmail.com
             </a>
           </motion.p>
           {/* form */}

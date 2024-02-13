@@ -11,7 +11,7 @@ const Socials = () => {
   return (
     <div className="flex items-center gap-x-5 text-lg">
       <Link
-        href={'https://www.linkedin.com/in/dhwang-cs'}
+        href={'https://www.linkedin.com/in/dhwang-contact'}
         className="hover:text-accent transition-all duration-300 text-black"
         target="_blank"
         rel="noopener noreferrer"
