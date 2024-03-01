@@ -6,10 +6,10 @@ import {
   RiFacebookLine,
   RiPinterestLine,
 } from 'react-icons/ri';
-
+import { FaGit, FaGithub } from 'react-icons/fa';
 const Socials = () => {
   return (
-    <div className="flex items-center gap-x-5 text-lg">
+    <div className="flex items-center gap-x-5 custom-font-size mb-4">
       <Link
         href={'https://www.linkedin.com/in/dhwang-contact'}
         className="hover:text-accent transition-all duration-300 text-black"
@@ -19,6 +19,14 @@ const Socials = () => {
         <RiLinkedinLine />
       </Link>
       <Link
+        href={'https://github.com/hwangdav000'}
+        className="hover:text-accent transition-all duration-300 text-black"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaGithub />
+      </Link>
+      {/* <Link
         href={'https://www.youtube.com/@davidhwang1465'}
         className="hover:text-accent transition-all duration-300 text-black"
         target="_blank"
@@ -49,7 +57,7 @@ const Socials = () => {
         rel="noopener noreferrer"
       >
         <RiPinterestLine />
-      </Link>
+      </Link> */}
     </div>
   );
 };

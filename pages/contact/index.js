@@ -42,7 +42,7 @@ const Contact = () => {
   return (
     <div className="h-full bg-background py-32 phone-scroll">
       <div className="container mx-auto text-center xl:text-left flex items-center justify-center">
-        <div className="flex flex-col w-full max-w-[700px] mt-12">
+        <div className="flex flex-col w-full max-w-[700px] mt-14">
           <motion.h2
             variants={fadeIn('down', 0.2)}
             initial="hidden"

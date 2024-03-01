@@ -20,6 +20,11 @@
   border-radius: 50%;
 }
 
+.custom-font-size {
+  font-size: 1.6rem;
+  line-height: 1.75rem;
+}
+
 .title-sizing {
   width: 400px;
   left: 50%;

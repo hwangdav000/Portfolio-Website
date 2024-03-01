@@ -9,7 +9,7 @@ const Work = () => {
   return (
     <div className="h-full bg-background py-32">
       <div className="container mx-auto flex flex-col">
-        <div className="flex flex-col xl:flex-row gap-x-8 xl:mt-40 mt-12">
+        <div className="flex flex-col xl:flex-row gap-x-8 xl:mt-40 mt-14">
           {/* text */}
           <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-20">
             <motion.h2
